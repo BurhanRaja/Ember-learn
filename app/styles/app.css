@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+a,
+button {
+    font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    background: #f3f3f3;
+}
+
+.container {
+    background-color: #f1f1f1;
+}
+.jumbo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2vw;
+}
+.tomster img {
+    height: 100px;
+    width: auto;
+}
+.tomster{
+    margin-left: 20px;
+}
+.text{
+    margin-right: 20px;
+}
+.text p{
+    font-size: 14px;
+}
