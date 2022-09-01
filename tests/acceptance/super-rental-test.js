@@ -9,11 +9,35 @@ module('Acceptance | super rental', function (hooks) {
     await visit('/');
     assert.strictEqual(currentURL(), '/');
 
-    assert.dom('h1').hasText('Welcome to Super Rentals!')
+    assert.dom('h1').hasText('Welcome to Super Rentals!');
 
-    assert.dom('.container a.button').hasText('About Us')
-    await click('.container a.button')
+    assert.dom('.container a.button').hasText('About Us');
+    await click('.container a.button');
 
-    assert.strictEqual(currentURL(), '/about')
+    assert.strictEqual(currentURL(), '/about');
+  });
+
+  test('visiting /about', async (assert) => {
+    await visit('/about');
+
+    assert.strictEqual(currentURL(), '/about');
+
+    assert.dom('h1').hasText('About Super Rentals');
+
+    assert.dom('.container a.button').hasText('Contact Us');
+    await click('.container a.button');
+
+    assert.strictEqual(currentURL(), '/getting-in-touch');
+  });
+
+  test('visiting /getting-in-touch', async (assert) => {
+    await visit('/getting-in-touch');
+
+    assert.strictEqual(currentURL(), '/getting-in-touch');
+
+    assert.dom('h1').hasText('Contact Us');
+
+    assert.dom('.jumbo .address .phonenumber').hasText('+1 (503) 555-1212');
+    assert.dom('.jumbo .address .email').hasText('superrentalsrep@emberjs.com');
   });
 });
