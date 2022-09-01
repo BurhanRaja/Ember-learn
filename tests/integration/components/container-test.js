@@ -7,14 +7,13 @@ module('Integration | Component | container', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-
     await render(hbs`
       <Container>
         Hello World!
       </Container>
     `);
 
-    assert.dom('.container').exists()
-    assert.dom('.container').hasText('Hello World!')
+    assert.dom('.container').exists();
+    assert.dom('.container').hasText('Hello World!');
   });
 });
