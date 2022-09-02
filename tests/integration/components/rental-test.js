@@ -31,5 +31,6 @@ module('Integration | Component | rental', function (hooks) {
         'article .rentals .row .col-md-8 .card-body .details .type-bedrooms .bedrooms'
       )
       .includesText('15');
+    assert.dom('article .rentals .image').exists()
   });
 });
